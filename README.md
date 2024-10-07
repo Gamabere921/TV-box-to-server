@@ -32,40 +32,40 @@ Para quienes poseen una TV box, sabrán que su sistema operativo es Android. El 
 2. Descargar e instalar BalenaEtcher
 3. Antes de instalar Dietpi en la SD tienes que tener en cuenta que toda la informacion que tengas en la SD se va eliminar, una vez tengas en cuenta esto procedemos a insertar la SD en la laptop, abrimos BalenaEtcher y seleccionamos el IMG y presionamos el boton de FLASH. El proceso puede tardar, es importante que no se mueva ni desconecte la SD.
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image.png)
+    ![image.png](Imagenes/image.png)
     
 4. Antes de insertar la SD a la TV box es necesario verificar primero que nuestra TV box detecta perfectamente el Ethernet, para eso podemos conectar el cable de Ethernet de la TV box al router y verificar que el router detecta el uso del puerto Ethernet. Ejemplo si lo conectamos al puerto 1 Ethernet deberia de verse asi:
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%201.png)
+    ![image.png](Imagenes/image%201.png)
     
 5. Vamos a colocar la SD dentro de la TV box y reiniciamos la TV box, se debe de **iniciar automáticamente** el instalador de Dietpi y al final se debe de poder ver un login, podemos ingresar con las credeciales root:dietpi, se debe de ver algo asi:
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%202.png)
+    ![image.png](Imagenes/image%202.png)
     
 6. De  aquí en adelante, es la instalación normal de un Linux,solo te puedes mover con las flechas, primero te va a pedir configurar el teclado (si no sabes cual es te recomiendo que pongas la de Generic 105-key PC), si utilizas la “ñ” selecciona Spanish (Latin American) y lo dejas predeterminado. 
 7. Después de configurar el teclado nos va a pedir cambiar la contraseña, es aquí cuando podemos seleccionar la contraseña que queramos y después nos debe de salir un menu asi:
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%203.png)
+    ![image.png](Imagenes/image%203.png)
     
 8. Felicidades ya tienes el servidor funcionando, si es que tu TV box tiene buenas características de hardware le puedes instalar una interfaz gráfica en el apartado de “Browse Software/Desktops” y en general para instalar cualquier programa, podemos usar esa herramienta. En este caso voy a instalar la interfaz gráfica Xfce, para eso solo nos movemos con las flechas y con la tecla de espacio seleccionamos la opción y presionamos Enter.
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%204.png)
+    ![image.png](Imagenes/image%204.png)
     
 9. Después de darle Enter nos va mandar al menu principal y seleccionamos “Install” y nos va salir los programas que se van a instalar, por ultimo solo es continuar:
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%205.png)
+    ![image.png](Imagenes/image%205.png)
     
 10. Después  de que se instala es necesario configurarlo para que se inicie el modo escritorio, si utilizamos el comando `bash` se nos recarga los comando predeterminados.
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%206.png)
+    ![image.png](Imagenes/image%206.png)
     
 11. Escribimos el comando `dietpi-launcher` nos va abrir un menu, seleccionamos “Auto start” y dentro de Auto start seleccionamos “LightDM login Mask” o la intefaz que hayan descargado
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%207.png)
+    ![image.png](Imagenes/image%207.png)
     
 12. Ahora simplemente salimos a la linea de comando y escribimos `reboot` y cuando se reinicie nos va decir que con cual usuario ingresamos, puede ser con el dietpi o root la contraseña de ambos es la que seleccionaste
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%208.png)
+    ![image.png](Imagenes/image%208.png)
     
 
 ---
@@ -85,16 +85,16 @@ Usualmente la dirección de nuestro router es el Gateway, pero como se menciono 
 1. Si quieres intentar con la dirección del Gateway puedes usar el comando `ipconfig` para windows y `ip add` para linux y verificar cual es el gateway
 2.  Una ves dentro de nuestro router vamos al apartado de dispositivos conectados y vemos los que esten conectado al Ethernet
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%209.png)
+    ![image.png](Imagenes/image%209.png)
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%2010.png)
+    ![image.png](Imagenes/image%2010.png)
     
 
 1. Otra opción de utilizar una herramienta llamada [nmap](https://nmap.org) y haces un escaneo de todo el segmento de red, ejemplo: si tu dirección IP es 192.168.1.150, remplazas el ultimo segmento con un 0/24 y quedaría como 192.168.1.0/24. Entonces el comando seria `nmap 192.168.1.0/24`
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%2011.png)
+    ![image.png](Imagenes/image%2011.png)
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%2012.png)
+    ![image.png](Imagenes/image%2012.png)
     
 
 ### Windows
@@ -102,17 +102,17 @@ Usualmente la dirección de nuestro router es el Gateway, pero como se menciono 
 1. Descargas e instalas PuTTY 
 2. Lo abres, seleccionas SSH, verifica que este el puerto 22 y  pones la dirección IP local que se le asigno a nuestro servidor. Esta imagen es de referencia, tu dirección IP probablemente sea diferente:
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%2013.png)
+    ![image.png](Imagenes/image%2013.png)
     
 3. Te debe de salir una terminal, ingresas las credenciales de inicio de sesión (root:dietpi) y continuas con la instalción antes mencionada. 
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%2014.png)
+    ![image.png](Imagenes/image%2014.png)
     
 
 ### Linux
 
 1. Utilizamos el comando ssh `root@IP`  y ponemos las credenciales (root:dietpi) 
     
-    ![image.png](Tu%20Propio%20Servidor%20Linux%20con%20una%20TV%20Box%20Una%20Soluci%20301a7b4207494dc0b43e63648ef57b79/image%2015.png)
+    ![image.png](Imagenes/image%2015.png)
     
 2. Continuamos con la instalación antes mencionada del sistema
